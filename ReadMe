@@ -1,0 +1,14 @@
+**Welcome to K`sKart**- Your premier destination for exquisite jewelry pieces.
+## INTRODUCTION:
+Jewellery kart is an online platform dedicated to providing customers with a stunning collection of high-quality jewelry items.Our platform offers a seamless shopping experience,with feature designed to simplify product discovery purchasing and management.
+## FEATURE:
+**User Model**:User can create account, manage their profiles,and track their orders.
+**Product Model**:Browser through our extensive collection of jewelry items.
+**Category Model**:Jewelry items are organized into categories,allowing for easy navigation and discovery.
+**Registration & Authentication**:Secure user registration and authentication processes ensure data privacy and account security.
+**Product Creation**:Authorized users can create and manage product listings, including detailed such as images, descriptions, and pricing.
+**CRUD For Categories**:Admin users have the ability to perform CRUD operation ( Create,Read,Update,Delet)on product categories, ensuring a well-organized catelog.
+**CRUD For Product**:Admin user can manage product listins,including adding new products,updating existing one`s and removing outdated items.
+## CONTACT US:
+We are committed to providing exceptional customer service. for any inquiries, please reach out to us at [contact@k`sKart.com]or [0595716112]
+**Thank you for choosing K`sKart for all your jewelry needs.We look forward for serving you.
