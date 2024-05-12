@@ -19,12 +19,12 @@ app.post("/signup", async (req, res) => {
     res.status(201).json({ user });
   });
   app.post("/login", async (req, res) => {
-    const { Email, password } = req.body;
-    const userByEmail = await prisma.user.findUnique({ where: { Email:  Email} });
+    const { email, password } = req.body;
+    const userByEmail = await prisma.user.findUnique({ where: { email:  email} });
     if (!Email) {
       res.status(400).json({ message: "Account not found, please signup!" });
     } else {
-      const SysPass = Email.password;
+      const SysPass = userByEmail.password;
       if (password != SysPass) {
         res.status(400).json({ message: "Invaild credentials" });
       } else {
