@@ -16,9 +16,12 @@ datasource db {
 // User model
 model User {
   id        Int      @id @default(autoincrement())
-  username  String   @unique
+  username  String   
   email     String   @unique
   password  String
+  createdAt String
+  updatedAt String
+
 
 }
 
@@ -28,6 +31,11 @@ model Product {
   name        String
   description String
   price       Float
+  image       String
+  Quantity    Int
+  CategoryId  String
+  CreatedAt   String
+  UpdatedAt   String
 }
 
 // Category model
@@ -35,7 +43,9 @@ model Category {
   id          Int      @id @default(autoincrement())
   name        String   @unique
   description String
+  product     String
 
 }
+
 
 

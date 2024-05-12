@@ -11,6 +11,10 @@ const port=3000
 app.get('/',(res,send)=>{
     res.send("Hello KS_KART")
 })
-app.listen(port,() =>{
-    console.log(`hello listen to my ${port}`)
-})
+app.post("/signup", async (req, res) => {
+    const data = req.body;
+    const user = await prisma.user.create({
+      data,
+    });
+    res.status(201).json({ user });
+  });
