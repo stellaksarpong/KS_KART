@@ -20,7 +20,7 @@ app.post("/signup", async (req, res) => {
   });
   app.post("/login", async (req, res) => {
     const { Email, password } = req.body;
-    const Email = await prisma.user.findUnique({ where: { Email:  Email} });
+    const userByEmail = await prisma.user.findUnique({ where: { Email:  Email} });
     if (!Email) {
       res.status(400).json({ message: "Account not found, please signup!" });
     } else {
