@@ -18,3 +18,6 @@ app.post("/signup", async (req, res) => {
     });
     res.status(201).json({ user });
   });
+  app.listen(port,()=>{
+    res.send(`hello listen to my port${port}`)
+  })
