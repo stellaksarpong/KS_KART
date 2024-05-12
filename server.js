@@ -18,6 +18,20 @@ app.post("/signup", async (req, res) => {
     });
     res.status(201).json({ user });
   });
+  app.post("/login", async (req, res) => {
+    const { Email, password } = req.body;
+    const Email = await prisma.user.findUnique({ where: { Email:  Email} });
+    if (!Email) {
+      res.status(400).json({ message: "Account not found, please signup!" });
+    } else {
+      const SysPass = Email.password;
+      if (password != SysPass) {
+        res.status(400).json({ message: "Invaild credentials" });
+      } else {
+        res.status(200).json({ message: " Login succesful" });
+      }
+    }
+  });
   app.listen(port,()=>{
     res.send(`hello listen to my port${port}`)
   })
